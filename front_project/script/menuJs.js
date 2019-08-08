@@ -100,4 +100,26 @@ $(function () {
             $("#tail_img").css("background-color", tText);
         }
     });
+    $("#box [type=range]").on("input", function () {
+        if ($(this).prop("id") == "BGM")
+            localStorage.setItem("BGM", parseInt($(this).val()) / 100);
+        if ($(this).prop("id") == "SE")
+            localStorage.setItem("SE", parseInt($(this).val()) / 100);
+        console.log($(this).prop("id"))
+
+    })
+    function initial() {
+        if (localStorage["BGM"]) {
+            $("#BGM").prop("value", (localStorage["BGM"] * 100).toString());
+        }
+        if (localStorage["SE"]) {
+            $("#SE").prop("value", (localStorage["SE"] * 100).toString());
+        }
+        $("#sHead").prop("value", 0);
+        $("#sBody").prop("value", 0);
+        $("#sTail").prop("value", 0);
+    
+    }
+    initial();
 });
+

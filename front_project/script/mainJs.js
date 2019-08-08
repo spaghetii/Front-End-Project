@@ -149,10 +149,21 @@ class Game {
         this.render()
         this.update()
         this.getScore();
-        document.getElementById("bgAudio").volume = this.BGMVolume;
-        $("#BGM").prop("value", (this.BGMVolume * 100).toString());
-        document.getElementsByClassName("soundEffect").volume = this.SEVolume;
-        $("#SE").prop("value", (this.SEVolume * 100).toString());
+        if (localStorage["BGM"]) {
+            document.getElementById("bgAudio").volume = localStorage["BGM"];
+            $("#BGM").prop("value", (localStorage["BGM"] * 100).toString());
+        } else {
+            document.getElementById("bgAudio").volume = this.BGMVolume;
+            $("#BGM").prop("value", (this.BGMVolume * 100).toString());
+
+        }
+        if (localStorage["SE"]) {
+            document.getElementsByClassName("soundEffect").volume = localStorage["SE"];
+            $("#SE").prop("value", (localStorage["SE"] * 100).toString());
+        } else {
+            document.getElementsByClassName("soundEffect").volume = this.SEVolume;
+            $("#SE").prop("value", (this.SEVolume * 100).toString());
+        }
 
     }
 
@@ -319,11 +330,14 @@ function handleLoad() {
         $("#start-game").prop("src", "img/start_btn.png");
     });
     $("#box [type=range]").on("input", function () {
-        if ($(this).prop("id") == "BGM")
-            document.getElementById("bgAudio").volume=parseInt($(this).val())/100;
-        if ($(this).prop("id") == "SE")
-            document.getElementsByClassName("soundEffect").volume=parseInt($(this).val())/100;
-        console.log(document.getElementsByClassName("soundEffect").volume);
+        if ($(this).prop("id") == "BGM") {
+            document.getElementById("bgAudio").volume = parseInt($(this).val()) / 100;
+            localStorage.setItem("BGM", parseInt($(this).val()) / 100);
+        }
+        if ($(this).prop("id") == "SE") {
+            document.getElementsByClassName("soundEffect").volume = parseInt($(this).val()) / 100;
+            localStorage.setItem("SE", parseInt($(this).val()) / 100);
+        }
 
     })
     $("#setting").mouseenter(() => {
@@ -354,8 +368,8 @@ function handleLoad() {
         if (setPause) game.start = true;
         event.cancelBubble = true;
     });
-    $("#question").click(()=>{
-        
+    $("#question").click(() => {
+
         $("#tip").fadeIn(1000).fadeOut(5000);
     });
 
