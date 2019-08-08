@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+#menu_div {
+    width: 100vw;
+    height: 99vh;
+    background: #fff url("../img/background_main.png") center center fixed no-repeat;
+    background-size: cover;
+}
+
+#main_screen {
+    position: absolute;
+    width: 1004px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -500px;
+}
+
+#level {
+    width: 800px;
+    height: 100%;
+    /* 邊界 */
+    border: 1px solid black;
+    margin-right: -4px;
+    padding: 0;
+}
+
+#status_broad {
+    width: 200px;
+    height: 600px;
+}
+
+#game_window {
+    width: 800px;
+    height: 600px;
+    float: left;
+}
+
+#status {
+    width: 200px;
+    height: 600px;
+    float: left;
+    background-image: url("../img/status_broad.png");
+    background-size: 200px 600px;
+}
+
+#tip{
+    width: 180px;
+    height: 200px;
+    margin: 20px 0px 0px 10px;
+    display: none;
+}
+
+#score {
+    margin: 15px auto auto 10px;
+    width: 180px;
+    height: 90px;
+}
+
+#scoreName {
+    width: 100px;
+    height: 30px;
+}
+
+.Crossbar {
+    background-image: url("../img/Crossbar.png");
+    width: 200px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#panelDiv {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: 0;
+    left: 0;
+}
+
+#panel {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+#start-game {
+    height: 75px;
+    width: 150px;
+    margin-left: 27px;
+}
+
+#controll {
+    position: absolute;
+    width: 180px;
+    height: 75px;
+    bottom: 50px;
+    right: 10px;
+}
+
+#controll img {
+    height: 75px;
+    width: 75px;
+    margin: 0px 0px 0px 7px;
+}
+
+.option_box {
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    margin: -250px 0 0 -300px;
+    background-color: #fff;
+    color: #7F7F7F;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px #333;
+    z-index: 101;
+    transition: all 2s ease-out;
+}
+
+.option_box h1 {
+    border-bottom: 1px dashed #7F7F7F;
+    text-align: center;
+    margin: -20px -20px 0px -20px;
+    padding: 10px;
+    background-color: rgb(87, 28, 28);
+    color: rgb(161, 161, 161);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.option_box>div:not(:last-child) {
+    padding: 50px;
+}
+
+.option_box>div:last-child {
+    width: 80px;
+    margin: 0 auto;
+}
+
+#right_top_div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+#shelder {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    z-index: -10;
+}

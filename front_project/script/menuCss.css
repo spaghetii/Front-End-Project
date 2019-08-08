@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#menu_div {
+    width: 100vw;
+    height: 99vh;
+    /* 設定背景圖片的呈現方式 */
+    background: #fff url("../img/background.png") center center fixed no-repeat;
+    /* 設定背景圖片的填滿方式; */
+    background-size: cover;
+}
+
+#right_top_div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+}
+
+#right_top_div img {
+    height: 75px;
+    width: 75px;
+}
+
+#mid_div {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -200px;
+}
+
+#mid_div>div {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+}
+
+.option_box {
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    margin: -250px 0 0 -300px;
+    background-color: #fff;
+    color: #7F7F7F;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px #333;
+    -webkit-box-shadow: 0 1px 5px #333;
+    z-index: 101;
+    transition: all 2s ease-out;
+}
+
+.option_box h1 {
+    border-bottom: 1px dashed #7F7F7F;
+    text-align: center;
+    margin: -20px -20px 0px -20px;
+    padding: 10px;
+    background-color: rgb(87, 28, 28);
+    color: rgb(161, 161, 161);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.option_box>div:not(:last-child) {
+    padding: 40px;
+}
+
+.option_box>div:last-child {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+.test {
+    width: 40px;
+    height: 40px;
+    border: black solid 3px;
+    border-radius: 10px;
+    background-color: red;
+    float: right;
+}
