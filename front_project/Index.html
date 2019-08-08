@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/9e0a1643b1.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- icon -->
+    <link rel="icon" href="img/icon.png" type=" image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="script/menuCss.css">
+
+    <title>Time's Sir</title>
+</head>
+
+<body>
+
+    <div id="menu_div">
+
+        <div id="mid_div">
+            <div>
+                <img src="img/Title.png" id="title">
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="start">開始遊戲</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="option">設　　定</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="define">自定角色</button>
+
+            </div>
+
+        </div>
+
+        <div id="right_top_div">
+            <img src="img/exit.png" id="exit">
+
+        </div>
+
+        <div class="option_box" id="box">
+
+            <div id="right_top_div">
+                <i class="fas fa-undo-alt fa-2x option_box_back"></i>
+            </div>
+            <h1>設　　定</h1>
+
+            <div>
+                <label for="BGM">音樂</label>
+                <input type="range" class="custom-range" id="BGM" min="0" max="100" value="10">
+            </div>
+
+            <div>
+                <label for="SE">音效</label>
+                <input type="range" class="custom-range" id="SE" min="0" max="100" value="100">
+            </div>
+
+            <div>
+                <input type="checkbox" id="full_or_window">
+                <label for="full_or_window">&nbsp;全螢幕</label>
+            </div>
+
+        </div>
+
+        <div class="option_box" id="box_player">
+
+            <div id="right_top_div">
+                <i class="fas fa-undo-alt fa-2x option_box_back"></i>
+            </div>
+            <h1>自訂顏色</h1>
+
+            <div>
+                <label for="sHead">蛇頭</label>
+                <div class="test" id="head_img"></div>
+                <input type="range" class="custom-range" id="sHead" min="0" max="1530" value="0">
+            </div>
+
+            <div>
+                <label for="sBody">身體</label>
+                <div class="test" id="body_img"></div>
+                <input type="range" class="custom-range" id="sBody" min="0" max="1530" value="0">
+            </div>
+
+            <div>
+                <label for="sTail">尾巴</label>
+                <div class="test" id="tail_img"></div>
+                <input type="range" class="custom-range" id="sTail" min="0" max="1530" value="0">
+            </div>
+
+            <div></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="script/menuJs.js">
+        
+    </script>
+</body>
+
+</html>
